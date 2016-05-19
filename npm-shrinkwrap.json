@@ -564,6 +564,18 @@
       "from": "filewatcher@>=3.0.0 <3.1.0",
       "resolved": "https://registry.npmjs.org/filewatcher/-/filewatcher-3.0.0.tgz"
     },
+    "fill-keys": {
+      "version": "1.0.2",
+      "from": "fill-keys@>=1.0.2 <2.0.0",
+      "resolved": "https://registry.npmjs.org/fill-keys/-/fill-keys-1.0.2.tgz",
+      "dependencies": {
+        "is-object": {
+          "version": "1.0.1",
+          "from": "is-object@>=1.0.1 <1.1.0",
+          "resolved": "https://registry.npmjs.org/is-object/-/is-object-1.0.1.tgz"
+        }
+      }
+    },
     "find-up": {
       "version": "1.1.2",
       "from": "find-up@>=1.0.0 <2.0.0",
@@ -1122,6 +1134,11 @@
       "from": "meow@>=3.3.0 <4.0.0",
       "resolved": "https://registry.npmjs.org/meow/-/meow-3.7.0.tgz"
     },
+    "merge-descriptors": {
+      "version": "1.0.1",
+      "from": "merge-descriptors@>=1.0.0 <1.1.0",
+      "resolved": "https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.1.tgz"
+    },
     "mime-db": {
       "version": "1.23.0",
       "from": "mime-db@>=1.23.0 <1.24.0",
@@ -1158,6 +1175,11 @@
           "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz"
         }
       }
+    },
+    "module-not-found-error": {
+      "version": "1.0.1",
+      "from": "module-not-found-error@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/module-not-found-error/-/module-not-found-error-1.0.1.tgz"
     },
     "ms": {
       "version": "0.7.1",
@@ -2690,6 +2712,11 @@
       "from": "progress@>=1.1.8 <2.0.0",
       "resolved": "https://registry.npmjs.org/progress/-/progress-1.1.8.tgz"
     },
+    "proxyquire": {
+      "version": "1.7.9",
+      "from": "proxyquire@latest",
+      "resolved": "https://registry.npmjs.org/proxyquire/-/proxyquire-1.7.9.tgz"
+    },
     "qs": {
       "version": "5.2.0",
       "from": "qs@>=5.2.0 <5.3.0",
@@ -3015,6 +3042,11 @@
       "version": "2.4.0",
       "from": "underscore.string@>=2.4.0 <2.5.0",
       "resolved": "https://registry.npmjs.org/underscore.string/-/underscore.string-2.4.0.tgz"
+    },
+    "untab": {
+      "version": "1.0.1",
+      "from": "untab@latest",
+      "resolved": "https://registry.npmjs.org/untab/-/untab-1.0.1.tgz"
     },
     "user-home": {
       "version": "2.0.0",

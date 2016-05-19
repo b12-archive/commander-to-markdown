@@ -12,7 +12,9 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "proxyquire": "^1.7.9"
+  },
   "devDependencies": {
     "coveralls": "^2.11.9",
     "eslint": "^2.10.2",
@@ -23,7 +25,8 @@
     "npm": "^3.9.0",
     "tap-spec-integrated": "^1.0.1",
     "tape": "^4.5.1",
-    "tape-catch": "^1.0.5"
+    "tape-catch": "^1.0.5",
+    "untab": "^1.0.1"
   },
   "files": [
     "/**/*.js",
