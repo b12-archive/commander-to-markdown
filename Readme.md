@@ -21,7 +21,7 @@
 
 # commander-to-markdown
 
-**Render the options of a commander app as markdown**
+**Render the options of a [commander](https://github.com/tj/commander.js) app as markdown**
 
 
 
@@ -41,7 +41,71 @@ $ npm install commander-to-markdown
 
 ## Usage
 
-*Work in progress…*
+Say you have a [commander](https://github.com/tj/commander.js) app which looks like this:
+
+<p align=right><b><sub>app.js</sub></b></p>
+
+```js
+const program = require('commander');
+
+program
+  .option('-p, --peppers', 'Add peppers')
+  .option('-P, --pineapple', 'Add pineapple')
+  .option('-b, --bbq-sauce', 'Add bbq sauce')
+  .option('-c, --cheese [type]', 'Pick the type of cheese', 'marble')
+  .parse(process.argv);
+```
+
+`commanderToMarkdown` is pretty much like the `require` function – only instead of the app itself, you get the program’s options rendered as markdown:
+
+<p align=right><b><sub>docs.js</sub></b></p>
+
+```coffee
+⏵ const commanderToMarkdown = require('commander-to-markdown');
+
+⏵ commanderToMarkdown('./app');
+⏴ '''
+#### `-p, --peppers`
+Add peppers.
+
+#### `-P, --pineapple`
+Add pineapple.
+
+#### `-b, --bbq-sauce`
+Add bbq sauce.
+
+#### `-c, --cheese [type]`
+Pick the type of cheese. Default: `marble`.
+'''
+```
+
+
+
+
+<a id="/demo"></a>&nbsp;
+
+## Demo
+
+Here’s how it looks rendered.
+
+<hr>
+
+#### `-p, --peppers`
+Add peppers.
+
+#### `-P, --pineapple`
+Add pineapple.
+
+#### `-b, --bbq-sauce`
+Add bbq sauce.
+
+#### `-c, --cheese [type]`
+Pick the type of cheese. Default: `marble`.
+
+<hr>
+
+This looks especially good when rendered as a manpage with [marked-man](https://github.com/kapouer/marked-man).
+
 
 
 
