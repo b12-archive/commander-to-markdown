@@ -1,0 +1,53 @@
+{
+  "name": "commander-to-markdown",
+  "version": "0.0.0",
+  "description": "Render the options of a commander app as markdown",
+  "scripts": {
+    "coverage": "rm -rf coverage && istanbul cover test.js",
+    "coveralls": "npm run coverage && cat coverage/lcov.info | coveralls",
+    "develop": "node-dev --respawn --no-notify --no-deps test.js",
+    "test": "eslint . && node test.js",
+    "reshrinkwrap": "rm -f npm-shrinkwrap.json && npm install && npm shrinkwrap --dev && git commit -m '[npm run shrinkwrap] Update dependencies' npm-shrinkwrap.json package.json"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "istanbul": "^0.4.3",
+    "node-dev": "^3.1.1",
+    "npm": "^3.9.0",
+    "tap-spec-integrated": "^1.0.1",
+    "tape": "^4.5.1",
+    "tape-catch": "^1.0.5"
+  },
+  "files": [
+    "/**/*.js",
+    "/Readme.md",
+    "/License.md"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "commander",
+    "render",
+    "markdown",
+    "md",
+    "manpage",
+    "marked-man",
+    "cli",
+    "docs",
+    "documentation"
+  ],
+  "author": "© 2016 Studio B12 GmbH (http://studio-b12.de)",
+  "contributors": [
+    "Tomek Wiszniewski <t.wiszniewski@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studio-b12/commander-to-markdown.git"
+  }
+}
