@@ -63,7 +63,7 @@ program
 ```coffee
 ⏵ const commanderToMarkdown = require('commander-to-markdown');
 
-⏵ commanderToMarkdown('./app');
+⏵ commanderToMarkdown(`${__dirname}/app`);
 ⏴ '''
 #### `-p, --peppers`
 Add peppers.
@@ -105,6 +105,15 @@ Pick the type of cheese. Default: `marble`.
 <hr>
 
 This looks especially good when rendered as a manpage with [marked-man](https://github.com/kapouer/marked-man).
+
+
+
+
+<a id="/caveats"></a>&nbsp;
+
+## Caveats
+
+At the moment `commanderToMarkdown` only accepts absolute paths.
 
 
 
