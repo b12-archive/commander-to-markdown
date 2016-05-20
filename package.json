@@ -1,6 +1,6 @@
 {
   "name": "commander-to-markdown",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Render the options of a commander app as markdown",
   "scripts": {
     "coverage": "rm -rf coverage && istanbul cover test.js",
