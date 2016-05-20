@@ -2,6 +2,11 @@
   "name": "commander-to-markdown",
   "version": "0.0.0",
   "dependencies": {
+    "1-liners": {
+      "version": "0.4.0",
+      "from": "1-liners@latest",
+      "resolved": "https://registry.npmjs.org/1-liners/-/1-liners-0.4.0.tgz"
+    },
     "abbrev": {
       "version": "1.0.7",
       "from": "abbrev@>=1.0.0 <1.1.0",
@@ -56,6 +61,11 @@
       "version": "1.0.1",
       "from": "array-find-index@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/array-find-index/-/array-find-index-1.0.1.tgz"
+    },
+    "array-iterate": {
+      "version": "0.1.0",
+      "from": "array-iterate@>=0.1.0 <0.2.0",
+      "resolved": "https://registry.npmjs.org/array-iterate/-/array-iterate-0.1.0.tgz"
     },
     "array-union": {
       "version": "1.0.1",
@@ -1190,6 +1200,11 @@
       "version": "0.0.5",
       "from": "mute-stream@0.0.5",
       "resolved": "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.5.tgz"
+    },
+    "nlcst-to-string": {
+      "version": "0.1.5",
+      "from": "nlcst-to-string@>=0.1.5 <0.2.0",
+      "resolved": "https://registry.npmjs.org/nlcst-to-string/-/nlcst-to-string-0.1.5.tgz"
     },
     "node-dev": {
       "version": "3.1.1",
@@ -2642,10 +2657,20 @@
       "from": "os-homedir@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/os-homedir/-/os-homedir-1.0.1.tgz"
     },
+    "parse-english": {
+      "version": "0.4.3",
+      "from": "parse-english@>=0.4.3 <0.5.0",
+      "resolved": "https://registry.npmjs.org/parse-english/-/parse-english-0.4.3.tgz"
+    },
     "parse-json": {
       "version": "2.2.0",
       "from": "parse-json@>=2.2.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz"
+    },
+    "parse-latin": {
+      "version": "0.4.2",
+      "from": "parse-latin@>=0.4.0 <0.5.0",
+      "resolved": "https://registry.npmjs.org/parse-latin/-/parse-latin-0.4.2.tgz"
     },
     "path-exists": {
       "version": "2.1.0",
@@ -2828,6 +2853,18 @@
       "version": "5.1.0",
       "from": "semver@>=2.0.0 <3.0.0||>=3.0.0 <4.0.0||>=4.0.0 <5.0.0||>=5.0.0 <6.0.0",
       "resolved": "https://registry.npmjs.org/semver/-/semver-5.1.0.tgz"
+    },
+    "sentence-tools": {
+      "version": "3.4.0",
+      "from": "sentence-tools@latest",
+      "resolved": "https://registry.npmjs.org/sentence-tools/-/sentence-tools-3.4.0.tgz",
+      "dependencies": {
+        "lodash": {
+          "version": "3.10.1",
+          "from": "lodash@>=3.9.3 <4.0.0",
+          "resolved": "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz"
+        }
+      }
     },
     "shelljs": {
       "version": "0.6.0",
