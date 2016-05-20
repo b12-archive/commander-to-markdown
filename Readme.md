@@ -118,7 +118,7 @@ This looks especially good when rendered as a manpage with [marked-man](https://
 ## Caveats
 
 * At the moment we only accept an absolute path.
-* To prevent executing the program, we stub out your `require('.')` and `require('..')` with an empty function which returns an object. If that’s not enough for you, please [fork and submit a PR](https://github.com/studio-b12/commander#fork-destination-box).
+* To prevent executing the program, we stub out your `require('.')` and `require('..')` with an empty function which returns an object. If that’s not enough for you, please [fork and submit a PR](https://github.com/studio-b12/commander-to-markdown#fork-destination-box).
 
 
 
