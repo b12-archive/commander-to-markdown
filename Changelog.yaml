@@ -1,3 +1,7 @@
+master:
+  new features:
+    - We now augment `arguments` to print docs for them as well.
+
 1.0.0:
   date: 2016-05-20
-  note: Initial release
+  note: Initial release.

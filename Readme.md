@@ -49,6 +49,7 @@ Say you have a [commander](https://github.com/tj/commander.js) app which looks l
 const program = require('commander');
 
 program
+  .arguments('<address>', 'Address for delivery')
   .option('-p, --peppers', 'Add peppers')
   .option('-P, --pineapple', 'Add pineapple')
   .option('-b, --bbq-sauce', 'Add bbq sauce')
@@ -65,6 +66,9 @@ program
 
 ⏵ commanderToMarkdown(`${__dirname}/app`);
 ⏴ '''
+#### `<address>`
+Address for delivery.
+
 #### `-p, --peppers`
 Add peppers.
 

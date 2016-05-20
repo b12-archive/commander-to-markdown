@@ -8,14 +8,19 @@ module.exports = (path) => {
 
   const commanderLookalike = {};
 
-  commanderLookalike.option = (label, description, defaultValue) => {
+  const pushOption = (label, description, defaultValue) => {
     options.push({ label, description, defaultValue });
     return commanderLookalike;
   };
+  [
+    'option', 'arguments',
+  ].forEach((key) => {
+    commanderLookalike[key] = pushOption;
+  });
 
   const noop = () => commanderLookalike;
   [
-    'version', 'usage', 'parse', 'arguments', 'action', 'command', 'on',
+    'version', 'usage', 'parse', 'action', 'command', 'on',
     'description', 'alias',
   ].forEach((key) => {
     commanderLookalike[key] = noop;

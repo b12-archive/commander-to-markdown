@@ -8,6 +8,9 @@ test('Works as advertized', (is) => {
   is.equal(
     commanderToMarkdown(`${__dirname}/test/fixtures/app`),
     u`
+      #### \`<address>\`
+      Address for delivery.
+
       #### \`-p, --peppers\`
       Add peppers.
 
