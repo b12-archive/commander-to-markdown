@@ -26,7 +26,11 @@ module.exports = (path) => {
     commanderLookalike[key] = noop;
   });
 
-  proxyquire(path, { commander: commanderLookalike });
+  proxyquire(path, {
+    commander: commanderLookalike,
+    '.': () => ({}),
+    '..': () => ({}),
+  });
 
   return options.map((option) => u`
     #### \`${option.label}\`

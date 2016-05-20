@@ -1,6 +1,7 @@
 require('tap-spec-integrated');
 const test = require('tape-catch');
 const u = require('untab');
+const proxyquire = require('proxyquire');
 
 const commanderToMarkdown = require('.');
 
@@ -37,5 +38,34 @@ test('Prints the description in sentences', (is) => {
     `,
     'capitalizes sentences'
   );
+  is.end();
+});
+
+test('Stubs out program logic', (is) => {
+  is.plan(3);
+
+  const myPath = '/a/b/c';
+
+  const commanderToMarkdownStub = proxyquire('.', {
+    proxyquire: (path, options) => {
+      is.equal(
+        path,
+        myPath,
+        'requires the given `path`'
+      );
+
+      const isStubbedOut = (modulePath) => is.deepEqual(
+        [typeof options[modulePath], String(options[modulePath])],
+        ['function', '() => ({})'],
+        `stubs out \`${modulePath}\` with a dummy function`
+      );
+
+      isStubbedOut('.');
+      isStubbedOut('..');
+    },
+  });
+
+  commanderToMarkdownStub(myPath);
+
   is.end();
 });

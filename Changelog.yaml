@@ -1,3 +1,7 @@
+master:
+  fixed bugs:
+    - Prevented executing program logic.
+
 1.1.0:
   date: 2016-05-20
   new features:
