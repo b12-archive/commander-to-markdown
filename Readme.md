@@ -62,10 +62,10 @@ program
 <p align=right><b><sub>docs.js</sub></b></p>
 
 ```coffee
-⏵ const commanderToMarkdown = require('commander-to-markdown');
+▸ const commanderToMarkdown = require('commander-to-markdown');
 
-⏵ commanderToMarkdown(`${__dirname}/app`);
-⏴ '''
+▸ commanderToMarkdown(`${__dirname}/app`);
+◂ '''
 #### `<address>`
 Address for delivery.
 
