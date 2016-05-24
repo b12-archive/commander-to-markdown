@@ -1,6 +1,6 @@
 {
   "name": "commander-to-markdown",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "dependencies": {
     "1-liners": {
       "version": "0.4.0",
