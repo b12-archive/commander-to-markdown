@@ -1,3 +1,7 @@
+master:
+  fixed bugs:
+    - Removed “experimental” badge.
+
 1.1.1:
   date: 2016-05-20
   fixed bugs:
