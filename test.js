@@ -41,6 +41,12 @@ test('Prints the description in sentences', (is) => {
   is.end();
 });
 
+const isStubbedOut = (is, options, modulePath) => is.deepEqual(
+  [typeof options[modulePath], String(options[modulePath])],
+  ['function', '() => ({})'],
+  `stubs out \`${modulePath}\` with a dummy function`
+);
+
 test('Stubs out program logic', (is) => {
   is.plan(3);
 
@@ -54,18 +60,29 @@ test('Stubs out program logic', (is) => {
         'requires the given `path`'
       );
 
-      const isStubbedOut = (modulePath) => is.deepEqual(
-        [typeof options[modulePath], String(options[modulePath])],
-        ['function', '() => ({})'],
-        `stubs out \`${modulePath}\` with a dummy function`
-      );
-
-      isStubbedOut('.');
-      isStubbedOut('..');
+      isStubbedOut(is, options, '.');
+      isStubbedOut(is, options, '..');
     },
   });
 
   commanderToMarkdownStub(myPath);
+
+  is.end();
+});
+
+test('`programModules` works', (is) => {
+  is.plan(2);
+
+  const myPath = '/a/b/c';
+
+  const commanderToMarkdownStub = proxyquire('.', {
+    proxyquire: (path, options) => {
+      isStubbedOut(is, options, '.');
+      isStubbedOut(is, options, './logic');
+    },
+  });
+
+  commanderToMarkdownStub(myPath, { programModules: ['.', './logic'] });
 
   is.end();
 });

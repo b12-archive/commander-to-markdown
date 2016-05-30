@@ -113,12 +113,23 @@ This looks especially good when rendered as a manpage with [marked-man](https://
 
 
 
+<a id="/api"></a>&nbsp;
+
+## Preventing the program from executing
+
+To prevent executing the program, we stub out your `require('.')` and `require('..')` with an empty function which returns an object. If that’s not enough for you, you can pass us the option `programModules`:
+
+```js
+commanderToMarkdown(`${__dirname/app}`, { programModules: ['.', './logic'] });
+```
+
+
+
 <a id="/caveats"></a>&nbsp;
 
 ## Caveats
 
 * At the moment we only accept an absolute path.
-* To prevent executing the program, we stub out your `require('.')` and `require('..')` with an empty function which returns an object. If that’s not enough for you, please fork and submit a PR.
 
 
 

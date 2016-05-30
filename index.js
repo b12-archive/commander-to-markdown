@@ -2,14 +2,18 @@ const proxyquire = require('proxyquire');
 const sentence = require('sentence-tools');
 const u = require('untab');
 const compose = require('1-liners').compose;
+const asObject = require('as/object');
 
-module.exports = (path) => {
-  const options = [];
+module.exports = (path, options) => {
+  const safeOptions = options || {};
+  const programModules = safeOptions.programModules || ['.', '..'];
+
+  const programOptions = [];
 
   const commanderLookalike = {};
 
   const pushOption = (label, description, defaultValue) => {
-    options.push({ label, description, defaultValue });
+    programOptions.push({ label, description, defaultValue });
     return commanderLookalike;
   };
   [
@@ -26,13 +30,16 @@ module.exports = (path) => {
     commanderLookalike[key] = noop;
   });
 
-  proxyquire(path, {
-    commander: commanderLookalike,
-    '.': () => ({}),
-    '..': () => ({}),
-  });
+  const programStubs = asObject(programModules.map((modulePath) => ({
+    key: modulePath,
+    value: () => ({}),
+  })));
 
-  return options.map((option) => u`
+  proxyquire(path, Object.assign({
+    commander: commanderLookalike,
+  }, programStubs));
+
+  return programOptions.map((option) => u`
     #### \`${option.label}\`
     ${
       option.description.split(/\.\s+/)
