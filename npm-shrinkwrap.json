@@ -82,6 +82,11 @@
       "from": "arrify@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/arrify/-/arrify-1.0.1.tgz"
     },
+    "as": {
+      "version": "0.4.1",
+      "from": "as@latest",
+      "resolved": "https://registry.npmjs.org/as/-/as-0.4.1.tgz"
+    },
     "asn1": {
       "version": "0.2.3",
       "from": "asn1@>=0.2.3 <0.3.0",

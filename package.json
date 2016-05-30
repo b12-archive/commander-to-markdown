@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "1-liners": "^0.4.0",
+    "as": "^0.4.1",
     "proxyquire": "^1.7.9",
     "sentence-tools": "^3.4.0",
     "untab": "^1.0.1"
