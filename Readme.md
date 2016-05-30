@@ -91,6 +91,9 @@ Here’s how it looks rendered.
 
 <hr>
 
+#### `<address>`
+Address for delivery.
+
 #### `-p, --peppers`
 Add peppers.
 
